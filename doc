@@ -1,0 +1,177 @@
+Perfect 👍 — here’s a **concise documentation-style description** of the entire OOP mini-project, including what each file should contain, what methods to implement, and what the **final output** should show.
+
+---
+
+## 🏢 **Employee Management System — OOP Concepts Demonstration**
+
+### 🎯 **Objective**
+
+To demonstrate **all core Object-Oriented Programming concepts** — *Encapsulation, Inheritance, Polymorphism, Abstraction, Interfaces, Static, Final, Super, and This* — through a simple company–employee–designation structure.
+
+---
+
+## 📂 **Module Overview**
+
+### **1️⃣ Company.java**
+
+**Purpose:** Represents the organization. Demonstrates `static` and `final` keywords.
+**Contents:**
+
+* `final String companyName = "TechVerse Pvt Ltd";`
+* `static String companyLocation = "Bangalore";`
+* `static void showCompanyDetails()` — displays static info.
+* `static block` — prints initialization message.
+
+**Concepts:** `static`, `final`
+
+---
+
+### **2️⃣ Employee.java**
+
+**Purpose:** Base class to encapsulate employee details.
+**Contents:**
+
+* **Private fields:** `empId`, `empName`, `department`.
+* **Constructors:** parameterized (using `this`).
+* **Methods:**
+
+  * Getters & Setters (Encapsulation)
+  * `displayEmployeeDetails()` — prints employee info.
+
+**Concepts:** `Encapsulation`, `this`
+
+---
+
+### **3️⃣ Designation.java**
+
+**Purpose:** Extends Employee to add role-related info.
+**Contents:**
+
+* **Fields:** `designationTitle`, `experience`.
+* **Constructor:** uses `super()` to call Employee constructor.
+* **Methods:**
+
+  * `displayDesignationDetails()` — prints role & experience.
+
+**Concepts:** `Inheritance`, `super`
+
+---
+
+### **4️⃣ Role.java (Interface)**
+
+**Purpose:** Declares job behavior to be implemented by all roles.
+**Contents:**
+
+* `void performDuties();`
+
+**Concepts:** `Interfaces`, `Abstraction`
+
+---
+
+### **5️⃣ Salary.java (Abstract Class)**
+
+**Purpose:** Provides salary structure and defines abstract calculation logic.
+**Contents:**
+
+* **Fields:** `baseSalary`.
+* **Abstract method:** `calculateSalary()`.
+* **Concrete method:** `showSalarySlip()` — displays formatted result.
+
+**Concepts:** `Abstraction`, `Abstract Classes`
+
+---
+
+### **6️⃣ Manager.java**
+
+**Purpose:** A subclass representing a manager role.
+**Contents:**
+
+* Extends `Designation`, implements `Role`.
+* Overrides:
+
+  * `performDuties()` → "Manages team and projects."
+  * `calculateSalary()` → `baseSalary + bonus`.
+
+**Concepts:** `Inheritance`, `Polymorphism`, `Interfaces`
+
+---
+
+### **7️⃣ Developer.java**
+
+**Purpose:** A subclass representing a developer role.
+**Contents:**
+
+* Extends `Designation`, implements `Role`.
+* Overrides:
+
+  * `performDuties()` → "Writes and tests code."
+  * `calculateSalary()` → `baseSalary + overtime pay`.
+
+**Concepts:** `Polymorphism`, `Abstraction`
+
+---
+
+### **8️⃣ MainApp.java**
+
+**Purpose:** Entry point to test all classes and relationships.
+**Contents:**
+
+* Calls `Company.showCompanyDetails()`.
+* Creates `Manager` and `Developer` objects.
+* Calls:
+
+  * `displayEmployeeDetails()`
+  * `displayDesignationDetails()`
+  * `performDuties()`
+  * `calculateSalary()`
+* Demonstrates method overriding and polymorphism using `Salary` reference type.
+
+**Concepts:** `Polymorphism`, `Static`, `Final`, `Super`, `This`
+
+---
+
+## 🖥️ **Expected Final Output Example**
+
+```
+--- Company Info ---
+Company: TechVerse Pvt Ltd
+Location: Bangalore
+
+--- Employee Details ---
+Employee ID: 101
+Name: Varshini
+Department: IT
+Designation: Manager
+Experience: 8 years
+Duties: Manages team and projects.
+Calculated Salary: ₹95000.0
+
+--- Employee Details ---
+Employee ID: 102
+Name: Arjun
+Department: Development
+Designation: Developer
+Experience: 4 years
+Duties: Writes and tests code.
+Calculated Salary: ₹78000.0
+```
+
+---
+
+## ✅ **Concepts Covered**
+
+| Concept       | Demonstrated In                |
+| ------------- | ------------------------------ |
+| Encapsulation | Employee.java                  |
+| Inheritance   | Designation.java, Manager.java |
+| Abstraction   | Salary.java                    |
+| Interface     | Role.java                      |
+| Polymorphism  | MainApp.java                   |
+| Static        | Company.java                   |
+| Final         | Company.java                   |
+| Super         | Designation.java               |
+| This          | Employee.java                  |
+
+---
+
+Would you like me to create **actual class templates (with code structure)** next for all these files so you can directly copy them into your project and fill logic?
