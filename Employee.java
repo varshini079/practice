@@ -4,6 +4,15 @@ public class Employee {
     private String name;
     private int ID;
     private String department;
+        public void setName(String name) {
+        this.name = name;
+    }
+    public void setID(int iD) {
+        ID = iD;
+    }
+    public void setDepartment(String department) {
+        this.department = department;
+    }
     public Employee(String name,int ID,String department){
         this.name=name;
         this.ID=ID;
@@ -23,4 +32,5 @@ public class Employee {
     System.out.println("Employee name: "+name+"\n Employee ID: "+ID+"\n Department: "+department);
   }
 }
+
 
