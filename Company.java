@@ -11,4 +11,12 @@ public class Company {
   static void showCompanyDetails(){
     System.out.println("Company name is "+companyName+"\n Company Location is "+companyLocation);
   }
+  public String getCompanyName(){
+    return companyName;
+  }
+
+  public String getREGNO(){
+    return REGNO;
+  }
 }
+
