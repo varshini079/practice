@@ -1,0 +1,196 @@
+DATA TYPES:
+8 primitive types	
+        int i=5;// 4 bytes
+        short s=5;//2 bytes
+        byte b=5;//1 byte 
+        long l=5l;//8 bytes
+        float f=5.5f;//4 bytes 
+        double d=5.5;//8 bytes 
+        char c='a';//2 bytes 
+        boolean check=true; //value is either true or false 
+    	   byte	-	nextByte();
+	   short	-	nextShort();
+	   int	-	nextInt();
+	   long	-               nextLong();
+	   char	-               nextLine().charAt(0);
+	   float	-	nextFloat();
+	   double	- 	nextDouble();
+	   String	- 	nextLine();
+
+Control Statements:
+2 Types;
+1. Conditional Statements
+	if, if else, if else if, nested if, switch
+
+2. Iterative or looping statements
+   for, while, do while loop
+   
+3 break, continue
+package com.userdefinedpackage;
+
+import java.util.Scanner;
+
+public class RoleDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your role (PA, Associate, Manager): ");
+        String role = sc.nextLine();
+
+
+        if (role.equalsIgnoreCase("PA")) {
+            System.out.println("Programmer Analyst");
+        } else if (role.equalsIgnoreCase("Associate")) {
+            System.out.println(" Associate Employee.");
+        } else if (role.equalsIgnoreCase("Manager")) {
+            System.out.println("Manager");
+        } else {
+            System.out.println("Role not recognized");
+        }
+
+ 
+        System.out.print("\nEnter years of experience: ");
+        int exp = sc.nextInt();
+
+        if (exp >= 0) {
+            if (exp < 2) {
+                System.out.println(" Junior in your role.");
+            } else if (exp <= 5) {
+                System.out.println("Mid-level in your role.");
+            } else {
+                System.out.println("Senior in your role.");
+            }
+        } else {
+            System.out.println("Experience cannot be negative!");
+        }
+
+
+        System.out.print("\nEnter your department (1-HR, 2-Finance, 3-Operations): ");
+        int dept = sc.nextInt();
+
+        switch (dept) {
+            case 1:
+                System.out.println(" HR Department.");
+                break;
+            case 2:
+                System.out.println("Finance Department.");
+                break;
+            case 3:
+                System.out.println("Operations Department.");
+                break;
+            default:
+                System.out.println("Invalid department!");
+        }
+
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("Task " + i );
+        }
+
+       
+        int progress = 0;
+        while (progress <= 100) {
+            System.out.println("Progress: " + progress);
+            
+            if (progress == 50) {
+                System.out.println("Half done ");
+            }
+            progress += 25;
+        }
+
+        char repeat;
+        do {
+            System.out.println("another task? (y/n): ");
+            repeat = sc.next().charAt(0);
+
+            if (repeat == 'y' || repeat == 'Y') {
+                System.out.println("new tak");
+            } else {
+                System.out.println("exit");
+                break; 
+            }
+
+        } while (true);
+
+    }
+}
+
+
+
+
+
+
+Types of Constructors:
+----------------------
+1) Default Constructor: 
+public class Test {
+      int x;
+	public static void main(String[] args) {
+		Test t=new Test();  // Object Creation
+		System.out.println(t.x);
+	}
+}
+0
+2) Constructor with No arguments
+   If you write a constructor in a class without any arguments is called Constructor with no arguments.
+package oops;
+public class Test {
+      int x;
+      public Test()  // Constructor with no arguments
+      {
+    	 System.out.println("Constructor with no arguments");
+    	 x=10;
+      }
+	public static void main(String[] args) {
+		Test t=new Test();  // Object Creation
+		System.out.println(t.x);
+	}
+
+}
+
+Constructor with no arguments
+10
+
+3) Parameterized Constructor
+public class Test {
+      int x;
+      public Test(int y) //parameterized constructor
+      {
+    	 System.out.println("Constructor with arguments");
+    	 x=y;
+      }
+     
+	public static void main(String[] args) {
+		Test t=new Test(15);  // Object Creation
+		System.out.println(t.x);
+	}
+
+}
+
+
+4) Copy Constructor
+package oops;
+public class Test {
+      int x;
+    public Test()
+    {
+    System.out.println("Constructor with No agruments");
+        x=101;
+    }
+    public Test(int y)
+    {
+    	System.out.println("Constructor with arguments");
+    	x=y;
+    }
+     
+	public static void main(String[] args) {
+		Test t1=new Test();  //Constructor without arguments 
+		Test t2=new Test(202); // Constructor with arguments
+		System.out.println(t1.x); // 101
+		System.out.println(t2.x); // 202
+	}
+
+}
+
+Constructor with No agruments
+Constructor with arguments
+101
+202
