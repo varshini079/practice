@@ -1,0 +1,69 @@
+### **Project: Employee Management System (OOP Concepts Demonstration)**
+
+**Objective:**
+Develop a small Java application using *Company, Employee, Designation, and Salary* classes to demonstrate all major OOP concepts — **Encapsulation, Inheritance, Polymorphism, Abstraction, Static, Final, Super, and This**.
+
+---
+
+### **Modules to Develop:**
+
+1. **Company Class**
+
+   * Contains static company details like company name and registration number.
+   * Use `static` and `final` keywords for shared and constant values.
+
+2. **Employee Class**
+
+   * Base class with private attributes (`name`, `id`, `department`).
+   * Use getters and setters for **Encapsulation**.
+   * Use `this` keyword to refer to current object and constructors.
+
+3. **Designation Class (extends Employee)**
+    * Manager and Developer extend Designation
+   * Demonstrates **Inheritance** and **super** keyword.
+   * Add role-related attributes (like `position`, `level`).
+
+4. **Salary (Abstract Class)**
+
+   * Demonstrates **Abstraction** — contains abstract method `calculateSalary()`.
+   * Create subclasses like `MonthlySalary` and `HourlySalary` to implement it differently.
+
+5. **Polymorphism Example**
+
+   * Override `calculateBonus()` in different designations (`Manager`, `Developer`, etc.) to show **Runtime Polymorphism**.
+   * performDuties() from interface Role behaves differently for each designation
+
+   Role interface defines unimplemented methods like performDuties(). 
+   Implemented by each designation to define job responsibilities.
+
+6. **Static and Final Demonstration**
+    Company contains static properties shared across all employees.
+
+final constants used for company registration number or tax rate.
+   * Use static block for initialization and final constants for company policies or IDs.
+
+7. **Main Class**
+
+   * Create objects, display details, and show method overriding and inheritance in action.
+
+---
+
+**Goal:**
+When you run the program, it should print employee details, their role, and salary calculation — clearly showing how each OOP feature works in one integrated example.
+
+---
+
+Company: Cognizant Technologies Pvt. Ltd. (REG NO: CTS1234)
+Employee Name: Varshini
+Role: Manager
+Duties: Oversees projects and manages team members.
+Base Salary: 70000
+Bonus: 15000
+Total Salary: 85000
+
+Employee Name: Raj
+Role: Developer
+Duties: Writes and maintains software applications.
+Base Salary: 50000
+Bonus: 10000
+Total Salary: 60000
